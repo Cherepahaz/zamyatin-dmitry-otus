@@ -17,7 +17,7 @@ const wordTransform = new Transform({
 
     transform(chunk, encoding, callback) {
         const words = chunk.split(/\s+/);
-        const filteredWords = words.map(word => word.replace(/[^а-яА-Яa-zA-Z]/g, '').toLowerCase());
+        const filteredWords = words.map(word => word.replace(/[^а-яА-Яa-zA-Z]/g, '').toLowerCase()).filter(Boolean);
         this.push(filteredWords);
         callback();
     }
