@@ -93,3 +93,12 @@ CREATE TABLE IF NOT EXISTS public.comments
         ON DELETE NO ACTION
 )
 ```
+6. В корне проекта создать файл .env
+   Для текущего проекта будет иметь следующую структуру:
+   ```command
+   DB_NAME='dev_otus'
+   DB_USER='postgres'
+   DB_PASSWORD='postgres'
+   DB_HOST='localhost'
+   DB_PORT=5432
+   ```
